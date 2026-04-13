@@ -1,0 +1,261 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0f0f12;
+  color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 520px;
+  background: #16161e;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  border: 1px solid #25252f;
+}
+
+/* Header */
+header {
+  padding: 24px 28px 16px;
+  text-align: center;
+  border-bottom: 1px solid #25252f;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+header p {
+  color: #888;
+  font-size: 14px;
+}
+
+/* Form */
+.task-form {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 14px 16px;
+  background: #1f1f29;
+  border: 1px solid #333;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+#taskInput:focus {
+  outline: none;
+  border-color: #6e56cf;
+  box-shadow: 0 0 0 3px rgba(110, 86, 207, 0.15);
+}
+
+.priority-select {
+  padding: 14px 16px;
+  background: #1f1f29;
+  border: 1px solid #333;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.priority-select:focus {
+  outline: none;
+  border-color: #6e56cf;
+}
+
+.btn-add {
+  padding: 14px;
+  background: linear-gradient(135deg, #6e56cf, #8a6fff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-add:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(110, 86, 207, 0.4);
+}
+
+.btn-add span {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.btn-add:hover span {
+  transform: scale(1.2);
+}
+
+/* Task List */
+.task-list {
+  min-height: 300px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 8px 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-item {
+  background: #1f1f29;
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #2a2a35;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.task-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.task-checkbox {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.task-checkbox.checked {
+  background: #6e56cf;
+  border-color: #6e56cf;
+}
+
+.task-checkbox.checked::after {
+  content: '✓';
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.task-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-text {
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.priority-tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+/* Prioridade Cores */
+.priority-alta {
+  background: #ff4d4d;
+  color: white;
+}
+
+.priority-media {
+  background: #ffaa00;
+  color: #1f1f29;
+}
+
+.priority-baixa {
+  background: #4caf50;
+  color: white;
+}
+
+/* Delete Button */
+.btn-delete {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.1);
+}
+
+/* Footer */
+.footer {
+  padding: 16px 28px;
+  border-top: 1px solid #25252f;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Scrollbar */
+.task-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

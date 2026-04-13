@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - To Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>TaskFlow</h1>
+      <p>Organize suas tarefas com simplicidade</p>
+    </header>
+
+    <form id="taskForm" class="task-form">
+      <div class="input-group">
+        <input 
+          type="text" 
+          id="taskInput" 
+          placeholder="Digite a descrição da tarefa..." 
+          required
+          autocomplete="off"
+        >
+        
+        <select id="priority" class="priority-select" required>
+          <option value="" disabled selected>Prioridade</option>
+          <option value="alta">Alta</option>
+          <option value="media">Média</option>
+          <option value="baixa">Baixa</option>
+        </select>
+      </div>
+      
+      <button type="submit" class="btn-add">
+        <span>+</span> Adicionar Tarefa
+      </button>
+    </form>
+
+    <div class="task-list" id="taskList"></div>
+
+    <div class="footer">
+      <span id="taskCount">0 tarefas</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
