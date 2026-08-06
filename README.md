@@ -31,10 +31,6 @@ Uma To-Do List moderna, clean e minimalista feita **apenas com HTML e CSS**, com
 - Feedback visual claro para cada ação
 - Prioridades destacadas com tags coloridas
 
-## 📸 Preview
-
-*(Você pode adicionar aqui uma imagem ou GIF do projeto em funcionamento)*
-
 ## 🚀 Como Executar
 
 1. Clone o repositório:
